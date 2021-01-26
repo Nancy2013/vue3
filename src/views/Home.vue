@@ -1,43 +1,18 @@
-<!--
- * @Author: your name
- * @Date: 2019-05-09 10:28:03
- * @LastEditTime: 2020-03-16 10:26:38
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \vue-framework-cli\src\views\Home.vue
- -->
 <template>
   <div class="home">
-    <img alt="Vue logo"
-         src="../assets/images/logo.png">
-    <img alt="Vue logo"
-         src="images/404.png">
-    <h1>{{ userInfo.userName }}</h1>
-    <HelloWorld
-      msg="Welcome to Your Vue.js App"
-    />
+    <img alt="Vue logo" src="../assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from 'componentsPath/HelloWorld.vue';
-import service from 'servicePath/index';
-import { mapState, mapGetters, mapActions } from 'vuex';
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component';
+import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 
-export default {
-  name: 'Home',
+@Options({
   components: {
     HelloWorld,
   },
-  computed: {
-    ...mapState('app', ['userInfo']),
-    // ...mapGetters('app', ['formatUserInfo']),
-  },
-  watch: {},
-  created() {},
-  methods: {
-    ...mapActions('app', ['setUserLogin']),
-  },
-};
+})
+export default class Home extends Vue {}
 </script>

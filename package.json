@@ -1,105 +1,27 @@
 {
-	"name": "vue-framework-cli",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"serve": "vue-cli-service serve",
-		"build": "vue-cli-service build",
-		"lint": "vue-cli-service lint",
-		"test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha-webpack --webpack-config webpack.config.js --require tests/setup.js tests/**/*.spec.js"
-	},
-	"nyc": {
-		"include": [
-			"src/**/*.(js|vue)"
-		],
-		"instrument": false,
-		"sourceMap": false
-	},
-	"dependencies": {
-		"ant-design-vue": "^1.3.8",
-		"axios": "^0.18.0",
-		"core-js": "^2.6.5",
-		"jsonp": "^0.2.1",
-		"prettier": "^1.13.7",
-		"qs": "^6.7.0",
-		"vue": "^2.6.10",
-		"vue-jest": "^3.0.4",
-		"vue-router": "^3.0.3",
-		"vuex": "^3.0.1"
-	},
-	"devDependencies": {
-		"@vue/cli-plugin-babel": "^3.7.0",
-		"@vue/cli-plugin-eslint": "^3.7.0",
-		"@vue/cli-plugin-unit-mocha": "^3.7.0",
-		"@vue/cli-service": "^3.7.0",
-		"@vue/component-compiler-utils": "^3.0.0",
-		"@vue/eslint-config-airbnb": "^4.0.0",
-		"@vue/test-utils": "1.0.0-beta.29",
-		"babel-core": "^6.26.3",
-		"babel-eslint": "^10.0.1",
-		"babel-jest": "^24.8.0",
-		"babel-loader": "^8.0.6",
-		"babel-plugin-istanbul": "^5.2.0",
-		"babel-preset-env": "^1.7.0",
-		"chai": "^4.1.2",
-		"cross-env": "^5.2.0",
-		"css-loader": "^0.28.4",
-		"eslint": "^5.16.0",
-		"eslint-config-airbnb-base": "^14.1.0",
-		"eslint-plugin-vue": "^5.0.0",
-		"expect": "^24.8.0",
-		"file-loader": "^4.1.0",
-		"identity-obj-proxy": "^3.0.0",
-		"jest-serializer-vue": "^2.0.2",
-		"jest-transform-stub": "^2.0.0",
-		"jsdom": "^15.1.1",
-		"jsdom-global": "^3.0.2",
-		"less": "^3.0.4",
-		"less-loader": "^4.1.0",
-		"mocha": "^6.2.0",
-		"mocha-webpack": "^1.1.0",
-		"node-sass": "^4.12.0",
-		"nyc": "^14.1.1",
-		"preload-webpack-plugin": "^3.0.0-beta.3",
-		"sass-loader": "^7.1.0",
-		"vue-loader": "^14.2.2",
-		"vue-style-loader": "^4.1.2",
-		"vue-template-compiler": "^2.5.21",
-		"webpack": "^4.37.0",
-		"webpack-dev-server": "^3.7.2",
-		"webpack-node-externals": "^1.7.2"
-	},
-	"jest": {
-		"moduleFileExtensions": [
-			"js",
-			"jsx",
-			"json",
-			"vue"
-		],
-		"moduleNameMapper": {
-			"^@/(.*)$": "<rootDir>/src/$1"
-		},
-		"notify": true,
-		"notifyMode": "always",
-		"snapshotSerializers": [
-			"jest-serializer-vue"
-		],
-		"testMatch": [
-			"**/tests/unit/**/*.test.(js|jsx|ts|tsx)"
-		],
-		"testURL": "http://localhost/",
-		"transform": {
-			"^.+\\.vue$": "vue-jest",
-			".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
-			"^.+\\.jsx?$": "babel-jest"
-		},
-		"transformIgnorePatterns": [
-			"/node_modules/"
-		],
-		"watchPlugins": [
-			"jest-watch-typeahead/filename",
-			"jest-watch-typeahead/testname"
-		],
-		"verbose": true
-	}
+  "name": "vue3-ts",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "vue": "^3.0.5",
+    "vue-class-component": "^8.0.0-rc.1",
+    "vue-router": "^4.0.3",
+    "vuex": "^4.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.5.11",
+    "@vue/cli-plugin-router": "^4.5.11",
+    "@vue/cli-plugin-typescript": "^4.5.11",
+    "@vue/cli-plugin-vuex": "^4.5.11",
+    "@vue/cli-service": "^4.5.11",
+    "@vue/compiler-sfc": "^3.0.5",
+    "less": "^3.13.1",
+    "less-loader": "^5.0.0",
+    "typescript": "^3.9.7"
+  }
 }
