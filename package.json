@@ -11,6 +11,7 @@
     "vue": "^3.0.5",
     "vue-class-component": "^8.0.0-rc.1",
     "vue-router": "^4.0.3",
+    "vue-template-compiler": "^2.0.0",
     "vuex": "^4.0.0-rc.2"
   },
   "devDependencies": {
